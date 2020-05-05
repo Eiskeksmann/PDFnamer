@@ -81,7 +81,7 @@ public class Pdfnamer {
 
         Pdfnamer main = new Pdfnamer();
         //C:/Users/Administrator/Desktop/TODO/TODO/test.xlsx
-        File myFile = new File("C://Users/Administrator/Desktop/TODO/TODO/offlinetest.xlsx");
+        File myFile = new File("res/offlinetest.xlsx");
         FileInputStream fis = new FileInputStream(myFile);
 
         // Finds the workbook instance for XLSX file
