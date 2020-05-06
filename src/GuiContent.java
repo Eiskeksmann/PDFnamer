@@ -38,8 +38,11 @@ public class GuiContent extends JPanel {
         runPanelConfig(pan_bot);
 
         this.lst_w = new List();
+        runListConfig(lst_w);
         this.lst_r = new List();
+        runListConfig(lst_r);
         this.lst_log = new List();
+        //runListConfig(lst_log);
 
         this.cmd_start = new Button("START");
         runButtonConfig(cmd_start);
@@ -50,6 +53,9 @@ public class GuiContent extends JPanel {
 
         this.lbl_r = new Label("RIGHT");
         this.lbl_w = new Label("WRONG");
+    }
+    private void runListConfig(List lst){
+        lst.setSize(new Dimension(100,1));
     }
     private void runButtonConfig(Button cmd){
         cmd.setBackground(Color.WHITE);

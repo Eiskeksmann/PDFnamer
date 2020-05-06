@@ -1,3 +1,4 @@
+import org.apache.commons.math3.util.Pair;
 import org.apache.poi.ss.usermodel.*;
 import org.apache.poi.ss.util.CellReference;
 import org.apache.poi.xssf.usermodel.XSSFFormulaEvaluator;
@@ -22,6 +23,7 @@ public class Pdfnamer {
     private File path;
     private File[] scans_right;
     private File[] scans_wrong;
+    private ArrayList<Pair<Integer, String>> paircheck;
     private File pivot_right;
     private File pivot_wrong;
 
@@ -97,7 +99,7 @@ public class Pdfnamer {
         //mainevaluator.setupReferencedWorkbooks(bookmap);
 
         // Return thrid sheet from the XLSX workbook
-        XSSFSheet sheet = xssfwb.getSheetAt(0);
+        XSSFSheet sheet = xssfwb.getSheetAt(1);
 
         boolean condition = false;
         Cell numbercell = null;
