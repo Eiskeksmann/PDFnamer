@@ -7,7 +7,7 @@ public class Gui extends JFrame {
 
         this.setTitle(title);
         this.setDefaultCloseOperation(EXIT_ON_CLOSE);
-        //this.setContentPane(new );
+        this.setContentPane(new GuiContent(d));
         this.pack();
         this.setLocationRelativeTo(null);
         this.setVisible(true);
