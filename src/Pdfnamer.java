@@ -62,7 +62,6 @@ public class Pdfnamer {
     public void startRenamingProcess(){
 
         for(File f : scans_wrong){
-                //todo
                 //boolean successor = f.renameTo("");
         }
     }

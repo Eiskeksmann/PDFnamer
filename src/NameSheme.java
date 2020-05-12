@@ -2,6 +2,7 @@ import java.util.StringTokenizer;
 
 public class NameSheme {
 
+    String name;
     String type;
     String month;
     String id;
@@ -10,7 +11,8 @@ public class NameSheme {
 
     public NameSheme(String name){
 
-        StringTokenizer tok = new StringTokenizer(name, "-");
+        this.name = name;
+        StringTokenizer tok = new StringTokenizer(this.name, "-");
         this.type = tok.nextToken();
         this.month = tok.nextToken();
         this.id = tok.nextToken();
@@ -19,6 +21,7 @@ public class NameSheme {
         number = sidetok.nextToken();
         fileextension = sidetok.nextToken();
     }
+    public String getName(){ return name; }
     public String getType(){ return type; }
     public String getMonth(){ return month; }
     public String getId(){ return id; }
@@ -38,6 +41,9 @@ public class NameSheme {
 
         if(id.equals(this.id)) return true;
         return false;
+    }
+    public int getIdAsInt(){
+        return Integer.parseInt(id);
     }
 
 }
